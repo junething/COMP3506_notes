@@ -1,4 +1,5 @@
 # Week 1
+
 ## Arrays
 - Accessable by _indexing_
 - Continuous area of storage (in most programming langauges)
@@ -37,12 +38,12 @@ How does an algorithm's runtime and memory usage increase with the size of the i
 
 ![graph](images/wk1/time_and_input_size.png)
 #### Limitations of Experiments
-- Need to iplement alogryth
+- Need to implement the algorithm
 	- May be difficult
 - Results may not be indicative of the running time on other inputs not included in the experiment
 - Comparing algorithms requires the same hardware and software envionments.
 
-## Theoretical Analy
+## Theoretical Analysis
 - Use a high-level description of the algorithm
 	- instead of an implementation
 - Characterises running time as a function of input size, *n*
@@ -113,10 +114,10 @@ Total:								# 7 * n [+ lower order terms]
 Name		| Math				| Found							
 ----------- | ----------------- | ----------------------------- 
 Constant	| $\approx 1$		| 
-Logarithmic	| $\approx \log_2n$ | Searching a sorted list
+Logarithmic	| $\approx \log_2{n}$ | Searching a sorted list
 Linear		| $\approx n$ 		| Searching an unsorted list
-N-Log-N		| $\approx n\logn$	|
-Quadratic	| $\appox n^2$ 		| Nested loops
+N-Log-N		| $\approx n\log_2{n}$	|
+Quadratic	| $\approx n^2$ 		| Nested loops
 Cubic		| $\approx n^3$	 	| Nested nested loops
 Exponential	| $\approx 2^n$		| Loop where the number of operations doubles each iteration
 
@@ -131,10 +132,10 @@ for i <- 0 to n-1 do
 	k <- k * 2
 	{ increment counter i }
 ```
-- Suppose “pick” takes 10-9s to executeq
+- Suppose pick takes 10-9s to executeq
 - This harmless looking loop would take 585 years to runn
-	- assuming 82 ∙ 109instructions per secq
-	- Would still take 7 years if “pick” takes a single instruction(unrealistic)
+	- assuming 82  109instructions per secq
+	- Would still take 7 years if pick takes a single instruction(unrealistic)
 
 ## Comparision of Two Algorithms
 ![graph comparing insertation sprt and merge sort](images/wk1/insertation_vs_merge_sort.png)
@@ -148,7 +149,7 @@ If it takes merge sort 0.5s to sort a list of a million items, it would take ins
 
 ## Analyisis Process
 - To perform an asymptotic analysis of the worst-case running time of an algorithm
-	- find the worst-case number of primitive operations executed as a function of the input size –f(n)
+	- find the worst-case number of primitive operations executed as a function of the input size f(n)
 		- since constant factors and lower-order terms do not affect the growth rate for large n they are usually disregarded when counting primitive operations
 	- express this function with big-O notation
 
@@ -189,5 +190,5 @@ $7n - 2 \text{is} O(n)$
 - need c > 0 and $n_0 >= 1$ such that $7n - 2 <= c \times n$ for $N >= N_0$ true for $c = 7$ and $n_0 = 1$
 $3n^3 + 20n^2 + 5 \text{is} O(n^3)$
 - need c > 0 and $n_0 >= 1$ such that $3n^3 + 20n^2 + 5 <= c \times n^3$ for N >= N_0$ true for $c = 4$ and $n_0 = 21$
-$3 \log(n) + 5 \ext{is} O(log(n))$
+$3 \log(n) + 5 \text{is} O(log(n))$
 - need c > 0 and $n_0 >= 1$ such that $3 \log(n) + 5 <= c \times \log(n)$ for $n >= n_0 true for $c = 7$ and $n_0 = 1$
